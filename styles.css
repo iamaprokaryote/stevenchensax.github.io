@@ -434,6 +434,46 @@ h1.glitch::after {
     color: var(--parchment);
 }
 
+/* Photos */
+.photo-grid {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.photo-item {
+    flex: 1 1 48%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.photo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.photo-item figcaption {
+    margin-top: 0.8rem;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 0.95rem;
+    color: #3a3028;
+    line-height: 1.6;
+}
+
+@media (max-width: 680px) {
+    .photo-grid {
+        flex-direction: column;
+    }
+
+    .photo-item {
+        flex: 1 1 100%;
+    }
+}
+
 /* Footer */
 footer {
     margin-top: 5rem;
