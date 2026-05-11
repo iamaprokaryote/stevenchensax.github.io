@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const texts = [
         "yes, i can play take five.",
-        "available for hire, lessons, and everything everywhere all at once.",
+        "available for hire, lessons and more. rates vary.",
         "catch a show! ticket links below.",
     ];
 
