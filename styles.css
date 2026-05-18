@@ -119,6 +119,10 @@ body.dark-mode::before {
     opacity: 0.06;
 }
 
+body.dark-mode .figcap {
+    color: #cbd9e4;
+}
+
 /* Grain texture overlay */
 body::before {
     content: '';
