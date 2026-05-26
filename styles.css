@@ -42,7 +42,7 @@ body.dark-mode .panel {
 
 body.dark-mode .rule::before,
 body.dark-mode .rule::after {
-    background: rgba(255,255,255,0.08);
+    background: #cbd9e4;
 }
 
 body.dark-mode .nav-mark,
@@ -119,7 +119,8 @@ body.dark-mode::before {
     opacity: 0.06;
 }
 
-body.dark-mode .figcap {
+body.dark-mode .figcap,
+body.dark-mode figcaption {
     color: #cbd9e4;
 }
 
