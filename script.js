@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
     const texts = [
+        "welcome to my website!",
         "yes, i can play take five.",
-        "available for hire, lessons and more. rates vary.",
-        "catch a show! ticket links below.",
+        "available for hire, lessons, and more.",
     ];
 
-    const el = document.getElementById("typewriter");
+    const el = document.querySelector(".typewriter");
     let ti = 0, ci = 0, deleting = false;
 
     function type() {
@@ -35,20 +35,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setTimeout(type, 1000);
 
-    const themeToggle = document.getElementById("theme-toggle");
-    const storedTheme = localStorage.getItem("theme");
+    document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", (event) => {
+            if (!link.hash) return;
 
-    if (storedTheme === "dark") {
-        document.body.classList.add("dark-mode");
-        themeToggle.textContent = "Light mode";
-    }
+            const section = document.querySelector(`.${link.hash.slice(1)}`);
 
-    if (themeToggle) {
-        themeToggle.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
-            const isDark = document.body.classList.contains("dark-mode");
-            localStorage.setItem("theme", isDark ? "dark" : "light");
-            themeToggle.textContent = isDark ? "Light mode" : "Dark mode";
+            if (section) {
+                event.preventDefault();
+                section.scrollIntoView({ behavior: "smooth" });
+            }
         });
-    }
+    });
 });
