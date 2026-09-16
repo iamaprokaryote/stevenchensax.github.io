@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
     const texts = [
-        "welcome to my website!",
-        "yes, i can play take five.",
         "available for hire, lessons, and more.",
     ];
 
